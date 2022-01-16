@@ -4,7 +4,7 @@ export const createTodo = text => ({
     payload: { text },
 });
 
-export const RENICE_TODO = 'RENICE_TODO';
+export const REMOVE_TODO = 'REMOVE_TODO';
 export const removeTodo = text => ({
     type: REMOVE_TODO,
     payload: { text },
