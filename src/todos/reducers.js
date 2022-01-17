@@ -33,9 +33,9 @@ export const todos = (state = [], action) => {
             return state.filter(todo => todo.id !== todoToRemove.id);
         }
         case COMPLETE_TODO: {
-            const { text } = payload;
+            const { todo: todoToComplete } = payload;
             return state.map(todo => {
-                return todo.text === text ? { ...todo, isCompleted: true } : todo;
+                return todo.id === todoToComplete.id ? updatedTodo : todo;
             });
         }
         case LOAD_TODOS_SUCCESS: {
