@@ -1,0 +1,28 @@
+            ↗ [UI Triggers Action] ↘ → [(Thunk) Load Data, etc.]
+[Components See Updated State] ← [State Is Updated] ↙
+
+                [Component]
+            dispatch ↙  ↘ dispatch
+        [SOME_ACTION] ← [Some Thunk]
+        ↙       dispatch        ↕ fetch
+    [Reducers]              (server)
+    ↙
+{Redux Store}
+
+Redux:
+    store - stores the global state
+    actions - defines events that can be occurred { type, payload }
+    reducers - tells what to do with store when given action occurs
+Redux Thunk: 
+    deals with side-effects.
+Selectors (Reselect): 
+    Abstracts away how data is stored in Redux.
+    Give us a place to put logic for combining, filtering, transforming Redux 
+    data to data that componnet can use.
+Styled Components: 
+    Manage componnet styling.
+
+Separation of Concerns:
+    Component -> Display data
+    Reducers -> Manage state
+    Thunks -> Side-effect logic (e.g. network requests, etc.)
