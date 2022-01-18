@@ -21,8 +21,10 @@ Selectors (Reselect):
     data to data that componnet can use.
 Styled Components: 
     Manage componnet styling.
+    Allow us to define styles inside our JavaScript files.
 
 Separation of Concerns:
     Component -> Display data
     Reducers -> Manage state
     Thunks -> Side-effect logic (e.g. network requests, etc.)
+    Selectors -> Abstracting the state's format, transforming state data
