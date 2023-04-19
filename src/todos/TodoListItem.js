@@ -17,7 +17,7 @@ export const getBorderStyleForDate = (startingDate, currentDate) =>
     : '2px solid red');
 
 const TodoItemContainerWithWarning = styled(TodoItemContainer)`
-    border-bottom: ${props => getBorderStyleForDate(new Date(props.createdAt), Date.noe())};
+    border-bottom: ${props => getBorderStyleForDate(new Date(props.createdAt), Date.now())};
 `;
 
 const ButtonsContainer = styled.div`
